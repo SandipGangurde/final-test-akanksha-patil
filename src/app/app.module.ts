@@ -10,24 +10,30 @@ import { LoginComponent } from './modules/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { DashboardModule } from './modules/dashboard/dashboard.module'
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
+import { GuestRegistrationComponent } from './modules/guest-registration/guest-registration.component';
 
-const dashboardModule = () => import('./modules/dashboard/dashboard.module').then(x => x.DashboardModule)
+const dashboardModule = () =>
+  import('./modules/dashboard/dashboard.module').then((x) => x.DashboardModule);
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'guest-registration', component: GuestRegistrationComponent },
   { path: '**', component: LoginComponent },
-  { path: 'dashboard', children: [{ path: '', loadChildren: dashboardModule }] }
+  {
+    path: 'dashboard',
+    children: [{ path: '', loadChildren: dashboardModule }],
+  },
 ];
 
 //function is use to get jwt token from local storage
 export function tokenGetter() {
-  return localStorage.getItem("jwt");
+  return localStorage.getItem('jwt');
 }
 
 @NgModule({
@@ -38,6 +44,7 @@ export function tokenGetter() {
     SidebarComponent,
     LoginComponent,
     DashboardComponent,
+    GuestRegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,15 +59,13 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["localhost:7299"],
-        disallowedRoutes: []
-      }
-  }),
+        allowedDomains: ['localhost:7299'],
+        disallowedRoutes: [],
+      },
+    }),
     ToastrModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
-
+export class AppModule {}
