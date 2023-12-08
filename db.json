@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "admin"
+    }
+  ],
+  "employees": [
+    {
+      "id": 3,
+      "firstName": "Sonal",
+      "lastName": "Patil",
+      "gender": "Female",
+      "shift": "First Shift",
+      "mobile": "1233456789",
+      "email": "ak@gmail.com",
+      "shiftBookDate": "2023-11-03",
+      "acceptTerms": true
+    },
+    {
+      "id": 4,
+      "firstName": "Akanksha",
+      "lastName": "Patil",
+      "gender": "Female",
+      "shift": "First Shift",
+      "mobile": "1234567898",
+      "email": "ak@gmail.com",
+      "shiftBookDate": "2023-10-22",
+      "acceptTerms": true
+    },
+    {
+      "id": 6,
+      "firstName": "Pranav",
+      "lastName": "Patil",
+      "gender": "Male",
+      "shift": "Second Shift",
+      "mobile": "1234566677",
+      "email": "pk@gmail.com",
+      "shiftBookDate": "2023-10-18",
+      "acceptTerms": true
+    },
+    {
+      "id": 7,
+      "firstName": "Nidhi",
+      "lastName": "Patil",
+      "gender": "Female",
+      "shift": "First Shift",
+      "mobile": "1234567788",
+      "email": "nigh09@gmail.com",
+      "shiftBookDate": "2023-10-19",
+      "acceptTerms": false
+    },
+    {
+      "id": 8,
+      "firstName": "Mukta",
+      "lastName": "Barve",
+      "gender": "Male",
+      "shift": "Second Shift",
+      "mobile": "123",
+      "email": "asd@gmail.com",
+      "shiftBookDate": "2023-10-17",
+      "acceptTerms": true
+    },
+    {
+      "id": 9,
+      "firstName": "anuja",
+      "lastName": "Gaikhe",
+      "gender": "Male",
+      "shift": "Second Shift",
+      "mobile": "1234567889",
+      "email": "anu@gh.cm",
+      "shiftBookDate": "2023-10-18",
+      "acceptTerms": true
+    },
+    {
+      "id": 10,
+      "firstName": "Rina",
+      "lastName": "Gholap",
+      "gender": "Female",
+      "shift": "Second Shift",
+      "mobile": "1234555555",
+      "email": "asd@gh.com",
+      "shiftBookDate": "2023-10-25",
+      "acceptTerms": true
+    }
+  ]
+}
