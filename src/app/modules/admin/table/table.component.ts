@@ -3,8 +3,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
 import { AdminService } from 'src/app/shared/services/admin.service';
 import { TableEntity } from '../entities/table-entity';
-import { AddEditTableComponent } from './modals/add-edit-table/add-edit-table.component';
 import { DeleteModalComponent } from 'src/app/shared/components/delete-modal/delete-modal.component';
+import { AddEditTableComponent } from '../modals/add-edit-table/add-edit-table.component';
 
 @Component({
   selector: 'app-table',

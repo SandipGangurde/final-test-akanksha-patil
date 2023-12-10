@@ -87,12 +87,6 @@
   ],
   "tables": [
     {
-      "id": 1,
-      "name": "Table1",
-      "number": 101,
-      "description": "A description for Table1"
-    },
-    {
       "id": 2,
       "name": "Table2",
       "number": 102,
@@ -109,6 +103,40 @@
       "name": "Table4",
       "number": 104,
       "description": "A desc 4"
+    },
+    {
+      "id": 5,
+      "name": "table5",
+      "number": 105,
+      "description": "desc5"
+    },
+    {
+      "id": 6,
+      "name": "table6",
+      "number": 106,
+      "description": "desc6"
+    },
+    {
+      "id": 7,
+      "name": "Table1",
+      "number": 101,
+      "description": "Table1 desc"
+    }
+  ],
+  "bookingTable": [
+    {
+      "id": 1,
+      "tableId": "4",
+      "startTime": "2023-12-10T21:27",
+      "endTime": "2023-12-11T21:27",
+      "status": "Confirm"
+    },
+    {
+      "id": 2,
+      "tableId": "4",
+      "startTime": "2023-12-12T21:45",
+      "endTime": "2023-12-13T21:45",
+      "status": "Pending"
     }
   ]
 }

@@ -5,4 +5,9 @@ export const END_POINT = {
   DELETE_TABLE: 'tables/',
   SAVE_TABLE: 'tables',
   UPDATE_TABLE: 'tables/',
+
+  GET_TABLE_BOOKING: 'bookingTable',
+  DELETE_BOOKING_TABLE: 'bookingTable/',
+  SAVE_BOOKING_TABLE: 'bookingTable',
+  UPDATE_BOOKING_TABLE: 'bookingTable/',
 };

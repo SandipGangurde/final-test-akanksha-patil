@@ -7,14 +7,16 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminRoutingModule } from './admin-routing.module';
-import { AddEditTableComponent } from './table/modals/add-edit-table/add-edit-table.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TableBookingComponent } from './table-booking/table-booking.component';
+import { AddEditTableComponent } from './modals/add-edit-table/add-edit-table.component';
+import { AddEditTableBookingComponent } from './modals/add-edit-table-booking/add-edit-table-booking.component';
 
 const routes: Routes = [{ path: '', component: AdminComponent }];
 
 @NgModule({
-  declarations: [AdminComponent, TableComponent, AddEditTableComponent],
+  declarations: [AdminComponent, TableComponent, AddEditTableComponent, TableBookingComponent, AddEditTableBookingComponent],
   imports: [
     AdminRoutingModule,
     NgxDatatableModule,

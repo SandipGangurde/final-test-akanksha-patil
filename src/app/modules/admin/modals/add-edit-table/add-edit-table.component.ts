@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AdminService } from 'src/app/shared/services/admin.service';
-import { TableEntity } from '../../../entities/table-entity';
+import { TableEntity } from '../../entities/table-entity';
 
 @Component({
   selector: 'app-add-edit-table',

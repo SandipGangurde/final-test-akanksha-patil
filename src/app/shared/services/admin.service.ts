@@ -28,4 +28,26 @@ export class AdminService {
       `${BASE_URL + END_POINT.DELETE_TABLE + tableId}`
     );
   }
+
+  //#region TABLE BOOKING
+  public getbookingTables(): any {
+    return this.httpClient.get(BASE_URL + END_POINT.GET_TABLE_BOOKING);
+  }
+
+  public addEditBookingTable(data: TableEntity): any {
+    if (data.id) {
+      const endpoint = `${BASE_URL + END_POINT.UPDATE_BOOKING_TABLE + data.id}`;
+      return this.httpClient.put(endpoint, data);
+    } else {
+      const endpoint = `${BASE_URL + END_POINT.SAVE_BOOKING_TABLE}`;
+      return this.httpClient.post(endpoint, data);
+    }
+  }
+
+  public deleteBookingTable(tableId: number): any {
+    return this.httpClient.delete(
+      `${BASE_URL + END_POINT.DELETE_BOOKING_TABLE + tableId}`
+    );
+  }
+  //#endregion
 }
