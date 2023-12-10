@@ -63,6 +63,24 @@
         >
           End Time is required.
         </small>
+        <small
+          *ngIf="
+            bookingTableForm.get('endTime')?.hasError('endTimeInvalid') &&
+            bookingTableForm.get('endTime')?.touched
+          "
+          class="text-danger"
+        >
+          End Time should be greater than start time.
+        </small>
+        <small
+          *ngIf="
+            bookingTableForm.get('endTime')?.hasError('endTimeMinimumTime') &&
+            bookingTableForm.get('endTime')?.touched
+          "
+          class="text-danger"
+        >
+          Minimum 15 minutes gap is required between start and end times.
+        </small>
       </div>
     </div>
   </form>

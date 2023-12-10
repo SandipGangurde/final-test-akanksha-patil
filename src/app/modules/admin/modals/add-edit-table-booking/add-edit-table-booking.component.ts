@@ -1,6 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TableBookingEntity } from '../../entities/table-booking-entity';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AdminService } from 'src/app/shared/services/admin.service';
 import { TableEntity } from '../../entities/table-entity';
@@ -36,9 +41,38 @@ export class AddEditTableBookingComponent {
       id: [null],
       tableId: ['', Validators.required],
       startTime: [null, [Validators.required]],
-      endTime: [null, [Validators.required]],
+      endTime: [null, [Validators.required, this.endTimeValidator.bind(this)]],
       status: ['Pending'],
     });
+  }
+
+  private endTimeValidator(
+    control: AbstractControl
+  ): { [key: string]: boolean } | null {
+    debugger;
+    const startTime = this.bookingTableForm?.get('startTime')?.value;
+    const endTime = control.value;
+
+    if (startTime && endTime) {
+      const startTimeDate = new Date(startTime);
+      const endTimeDate = new Date(endTime);
+
+      if (endTimeDate <= startTimeDate) {
+        return { endTimeInvalid: true };
+      }
+    }
+
+    if (startTime && endTime) {
+      const startTimeDate = new Date(startTime).getTime(); // Cast to number
+      const endTimeDate = new Date(endTime).getTime(); // Cast to number
+      const minTimeGap = 15 * 60 * 1000; // 15 minutes in milliseconds
+
+      if (endTimeDate - startTimeDate < minTimeGap) {
+        return { endTimeMinimumTime: true };
+      }
+    }
+
+    return null;
   }
 
   private getTables(): void {
