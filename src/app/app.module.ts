@@ -24,6 +24,11 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'guest-registration', component: GuestRegistrationComponent },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./modules/admin/admin.module').then((m) => m.AdminModule),
+  },
   { path: '**', component: LoginComponent },
   {
     path: 'dashboard',

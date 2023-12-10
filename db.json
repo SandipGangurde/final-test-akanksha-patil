@@ -84,5 +84,31 @@
       "shiftBookDate": "2023-10-25",
       "acceptTerms": true
     }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "name": "Table1",
+      "number": 101,
+      "description": "A description for Table1"
+    },
+    {
+      "id": 2,
+      "name": "Table2",
+      "number": 102,
+      "description": "A description for Table2"
+    },
+    {
+      "id": 3,
+      "name": "Table3",
+      "number": 103,
+      "description": "A desc of table 3 update1"
+    },
+    {
+      "id": 4,
+      "name": "Table4",
+      "number": 104,
+      "description": "A desc 4"
+    }
   ]
 }
