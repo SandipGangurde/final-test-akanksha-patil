@@ -38,6 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ------------------------------------------------------------------------------------------------------------------------------
 // role-auth.guard.ts
+```
 import { Injectable } from "@angular/core";
 import { AuthService } from "./auth.service";
 import { Router, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate } from "@angular/router";
@@ -80,10 +81,10 @@ export class RoleAuthGuard implements CanActivate {
     return requiredRoles.every(role => userRoles.includes(role));
   }
 }
-
+```
 ------------------------------------------------------------------------------------------------------------------------------
 // app-routing.module.ts
-
+```
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -126,11 +127,11 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
+```
 
 ------------------------------------------------------------------------------------------------------------------------------
-
 // app-routing.module.ts
+```
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/login.component';
@@ -163,5 +164,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
+```
 
